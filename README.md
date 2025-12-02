@@ -92,7 +92,7 @@ $ project_folder/
 
 ## Running the Application
 
-1.  **Start the server in development env:**
+1.  **Start the server in development mode:**
 
     Navigate to the project directory and run the following command:
 
@@ -102,7 +102,17 @@ $ project_folder/
 
     The application will be available at `http://127.0.0.1:8000`.
 
-2. **Running unit test**
+2.  **Start the server in production mode:**
+    - Update configure in `start.sh` file
+    - Change file permission to allow execute: 744
+    - Start app from project dir:
+
+
+    ```bash
+    ./start.sh
+    ```
+
+3. **Running unit test**
     - Run test: pytest tests/test_http_blob.py::{test_case}
     - test_case should be one of following:
         1. test_http_store_and_retrieve_binary_blob

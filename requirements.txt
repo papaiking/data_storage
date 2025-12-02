@@ -10,3 +10,4 @@ greenlet
 boto3 # For S3 storage
 pytest      # For dev test only
 httpx       # For dev test only
+pydantic-settings

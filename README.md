@@ -53,30 +53,30 @@ $ project_folder/
 
 3.  **Configure the application:**
 
-    Create a `app/config.py` file in the project directory and override the default settings from `app/config_template.py`.
+    Create a `.env` file in the project directory and override the default settings from `app/config.py`.
 
-    **Example `fig.py` file:**
+    **Example `.env` file:**
 
     ```
-    SECRET_KEY="a-very-secret-key"
+    SECRET_KEY = "a-very-secret-key"
 
     # Local storage config
-    LOCAL_STORAGE_PATH="/path/to/your/storage"
+    LOCAL_STORAGE_PATH = "/path/to/your/storage"
 
     # Configuration for S3 storage
-    S3_ACCESS_KEY_ID: str = "xxxxx"
-    S3_SECRET_ACCESS_KEY: str = "xxxxxx"
-    S3_BUCKET_NAME: str = "xxxxx"
+    S3_ACCESS_KEY_ID = "xxxxx"
+    S3_SECRET_ACCESS_KEY = "xxxxxx"
+    S3_BUCKET_NAME = "xxxxx"
     S3_REGION_NAME = "xxxxx"
 
     ACTIVE_STORAGE="local"  # or "database"
 
     # Settings for Postgresql database storage
-    DB_USER="your_db_user"
-    DB_PASSWORD="your_db_password"
-    DB_HOST="localhost"
-    DB_PORT=3306
-    DB_NAME="your_db_name"
+    DB_USER = "your_db_user"
+    DB_PASSWORD = "your_db_password"
+    DB_HOST = "localhost"
+    DB_PORT = 3306
+    DB_NAME = "your_db_name"
     ```
 
 4.  **If using Postgresql, create the database:**

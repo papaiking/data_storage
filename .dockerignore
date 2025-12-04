@@ -1,0 +1,24 @@
+# Ignore temporary directories and files
+
+# .venv
+**/pycache
+*.pyc
+*.pyo
+
+# Ignore environment/secret files
+
+# .env
+.DS_Store
+*.swp
+
+# Ignore documentation, tests, etc. if they are not needed in the final image
+
+docs/
+
+# tests/
+
+# Ignore docker-related files themselves
+
+Dockerfile
+# start.sh
+.dockerignore

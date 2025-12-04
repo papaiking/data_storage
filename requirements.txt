@@ -1,13 +1,13 @@
-fastapi
-uvicorn
-pydantic[dotenv]
-sqlalchemy
-asyncpg
-aiofiles
-python-multipart
-psycopg2-binary
-greenlet
-boto3 # For S3 storage
-pytest      # For dev test only
-httpx       # For dev test only
-pydantic-settings
+fastapi==0.123.0
+uvicorn==0.38.0
+pydantic[dotenv]==2.12.5
+sqlalchemy==2.0.44
+asyncpg==0.31.0
+aiofiles==25.1.0
+python-multipart==0.0.20
+psycopg2-binary==2.9.11
+greenlet==3.2.4
+boto3==1.42.0                   # For S3 storage
+pytest==9.0.1                   # For dev test only
+httpx==0.28.1                   # For dev test only
+pydantic-settings==2.12.0

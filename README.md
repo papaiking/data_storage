@@ -34,9 +34,16 @@ $ project_folder/
 ├───requirements.txt
 ├───start.sh
 └───README.md
+└───docker-compose.yaml
+└───Dockerfile
+└───.dockerignore
 ```
 
 ## Setup
+
+0. **Environment:**
+
+    Python 3.12.0
 
 1.  **Create a virtual environment:**
 
@@ -90,7 +97,7 @@ $ project_folder/
     - Assign permissions to this user with S3 full access permissions
 
 
-## Running the Application
+## Running the Application manually
 
 1.  **Start the server in development mode:**
 
@@ -119,7 +126,29 @@ $ project_folder/
         2. test_retrieve_nonexistent_blob
         3. test_store_blob_invalid_token
         4. test_store_blob_invalid_base64
-    
+
+## Running with Docker
+
+1.  **Prerequisites:**
+
+    *   Docker and Docker Compose installed.
+    *   A `.env` file in the project root with the following minimum variables:
+        ```
+        ACTIVE_STORAGE=database
+        DB_USER=myuser
+        DB_PASSWORD=mypassword
+        DB_HOST=db      # Fixed
+        DB_PORT=5432
+        DB_NAME=mydatabase
+        ```
+
+2.  **Start the application:**
+
+    ```bash
+    docker-compose up
+    ```
+
+    The application will be available at `http://127.0.0.1:8000`.    
 
 ## API Usage
 

@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     ACTIVE_STORAGE: str = "database"  # 'local', 'database', or 's3'
 
     # Local storage config
-    LOCAL_STORAGE_PATH: str = "_blob_storage"
+    LOCAL_STORAGE_PATH: str = "./_blob_storage"
 
     # Configuration for S3 storage
     S3_ACCESS_KEY_ID: str = "xxxxxx"
